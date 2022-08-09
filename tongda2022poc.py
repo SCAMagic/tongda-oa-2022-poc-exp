@@ -69,7 +69,7 @@ def getsession(urls,codeuid):
 		session=r.headers['Set-Cookie']
 		print('[+]   '+url.replace('logincheck_code.php','general/')+'	session：'+session)
 		fff = open("./success.txt", 'a')
-		fff.write(url+'   session：'+session + '\n')
+		fff.write(url.replace('logincheck_code.php','general/')+'   session：'+session + '\n')
 		fff.close()
 	else:
 		print('[-]   '+url+'没有漏洞')
